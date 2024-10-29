@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="clouds.png" id="sea">
+        <h2 id="text">Journey Joys</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="down.png" id="moon">
+    </section>
+
+    <div class="sec">
+        <h2>Welcome to Your Ultimate Holiday Guide</h2>
+        <p>Explore the world of holidays where every getaway is a chance to create unforgettable memories. Whether you
+            seek adventure in the mountains, relaxation on the beach, or cultural immersion in vibrant cities, our guide
+            offers you the best destinations, travel tips, and insider secrets to make your holiday truly special.<br><br>
+
+            Discover stunning places, exciting activities, and local delicacies that will enrich your travel experience.
+            From romantic escapes to family-friendly adventures, we cater to all types of travelers.<br><br>
+
+            Let us help you plan your next holiday, turning dreams into reality. Embrace the joy of travel and embark on
+            a journey filled with fun, exploration, and relaxation. Your perfect holiday awaits!
+        </p>
+    </div>
+
+    <script>
+        let sea = document.getElementById('sea');
+        let moon = document.getElementById('moon');
+        let text = document.getElementById('text');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            // Move the images based on scroll value
+            sea.style.top = value * 0.2 + 'px'; // Move the cloud image
+            moon.style.bottom = value * 0.2 + 'px'; // Move the house image
+
+            // Scroll text from left to right
+            text.style.transform = `translateX(${value * 0.5}px)`; // Adjust speed as necessary
+        });
+    </script>
+</body>
+
+</html>
